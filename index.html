@@ -1,1 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular de Medicina</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Malla Curricular de Medicina</h1>
 
+        <div class="curriculum-grid">
+            <div class="semester-column">
+                <h2>Semestre 1</h2>
+                <div class="course" data-code="AC2001" data-name="Comunicación" data-prerequisites="">
+                    <span class="course-code">AC2001</span> Comunicación
+                </div>
+                <div class="course" data-code="AC2002" data-name="Estrategias para el Aprendizaje" data-prerequisites="">
+                    <span class="course-code">AC2002</span> Estrategias para el Aprendizaje
+                </div>
+                <div class="course" data-code="AC2003" data-name="Matemática Básica" data-prerequisites="">
+                    <span class="course-code">AC2003</span> Matemática Básica
+                </div>
+                <div class="course" data-code="AC2004" data-name="Inglés I" data-prerequisites="">
+                    <span class="course-code">AC2004</span> Inglés I
+                </div>
+                <div class="course" data-code="MH1011" data-name="Profesionalismo Médico" data-prerequisites="">
+                    <span class="course-code">MH1011</span> Profesionalismo Médico
+                </div>
+                <div class="course" data-code="MH1012" data-name="Biología Celular y Molecular" data-prerequisites="">
+                    <span class="course-code">MH1012</span> Biología Celular y Molecular
+                </div>
+                <div class="course" data-code="MH1017" data-name="Biofísica" data-prerequisites="">
+                    <span class="course-code">MH1017</span> Biofísica
+                </div>
+            </div>
+
+            <div class="semester-column">
+                <h2>Semestre 2</h2>
+                <div class="course" data-code="AC2005" data-name="Liderazgo y Desarrollo Personal" data-prerequisites="">
+                    <span class="course-code">AC2005</span> Liderazgo y Desarrollo Personal
+                </div>
+                <div class="course" data-code="AC2006" data-name="Redacción y Argumentación" data-prerequisites="AC2001">
+                    <span class="course-code">AC2006</span> Redacción y Argumentación
+                </div>
+                <div class="course" data-code="AC2007" data-name="Estrategias Digitales en el Manejo de la Información" data-prerequisites="">
+                    <span class="course-code">AC2007</span> Estrategias Digitales en la Información
+                </div>
+                <div class="course" data-code="AC2008" data-name="Inglés II" data-prerequisites="AC2004">
+                    <span class="course-code">AC2008</span> Inglés II
+                </div>
+                <div class="course" data-code="MH1024" data-name="MORFOFISIOLOGIA NORMAL I" data-prerequisites="MH1012 MH1017">
+                    <span class="course-code">MH1024</span> MORFOFISIOLOGIA NORMAL I
+                </div>
+                <div class="course" data-code="MH1025" data-name="QUÍMICA" data-prerequisites="">
+                    <span class="course-code">MH1025</span> QUÍMICA
+                </div>
+            </div>
+
+            <div class="semester-column">
+                <h2>Semestre 3</h2>
+                <div class="course" data-code="AC2009" data-name="Estadística" data-prerequisites="AC2003">
+                    <span class="course-code">AC2009</span> Estadística
+                </div>
+                <div class="course" data-code="AC2010" data-name="Emprendedurismo" data-prerequisites="">
+                    <span class="course-code">AC2010</span> Emprendedurismo
+                </div>
+                <div class="course" data-code="AC2011" data-name="Inglés III" data-prerequisites="AC2008">
+                    <span class="course-code">AC2011</span> Inglés III
+                </div>
+                <div class="course" data-code="MH1033" data-name="MORFOFISIOLOGÍA NORMAL II" data-prerequisites="MH1024">
+                    <span class="course-code">MH1033</span> MORFOFISIOLOGÍA NORMAL II
+                </div>
+                <div class="course" data-code="MH1035" data-name="BIOQUÍMICA" data-prerequisites="MH1012 MH1025">
+                    <span class="course-code">MH1035</span> BIOQUÍMICA
+                </div>
+            </div>
+
+            <div class="semester-column">
+                <h2>Semestre 4</h2>
+                <div class="course" data-code="AC2012" data-name="Realidad Nacional" data-prerequisites="">
+                    <span class="course-code">AC2012</span> Realidad Nacional
+                </div>
+                <div class="course" data-code="AC2013" data-name="Ética y Responsabilidad Social" data-prerequisites="">
+                    <span class="course-code">AC2013</span> Ética y Responsabilidad Social
+                </div>
+                <div class="course" data-code="AC2014" data-name="Inglés IV" data-prerequisites="AC2011">
+                    <span class="course-code">AC2014</span> Inglés IV
+                </div>
+                <div class="course" data-code="MH1043" data-name="NOXAS Y RESPUESTAS I" data-prerequisites="MH1033 MH1035">
+                    <span class="course-code">MH1043</span> NOXAS Y RESPUESTAS I
+                </div>
+                <div class="course" data-code="MH1044" data-name="SEMIOLOGÍA, FISIOPATOLOGÍA Y RACIOCINIO CLÍNICO" data-prerequisites="MH1033 MH1035">
+                    <span class="course-code">MH1044</span> SEMIOLOGÍA, FISIOPATOLOGÍA Y RACIOCINIO CLÍNICO
+                </div>
+            </div>
+
+            <div class="semester-column">
+                <h2>Semestre 5</h2>
+                <div class="course" data-code="MH1051" data-name="RELACION MÉDICO-PACIENTE" data-prerequisites="MH1011 MH1044">
+                    <span class="course-code">MH1051</span> RELACION MÉDICO-PACIENTE
+                </div>
+                <div class="course" data-code="MH1052" data-name="FARMACOLOGÍA GENERAL" data-prerequisites="MH1033 MH1035">
+                    <span class="course-code">MH1052</span> FARMACOLOGÍA GENERAL
+                </div>
+                <div class="course" data-code="MH1053" data-name="EPIDEMIOLOGÍA BÁSICA" data-prerequisites="AC2009 MH1043">
+                    <span class="course-code">MH1053</span> EPIDEMIOLOGÍA BÁSICA
+                </div>
+                <div class="course" data-code="MH1054" data-name="MEDICINA INTERNA I" data-prerequisites="MH1044">
+                    <span class="course-code">MH1054</span> MEDICINA INTERNA I
+                </div>
+                <div class="course" data-code="MH1055" data-name="PROMOCIÓN DE LA SALUD" data-prerequisites="MH1011 MH1044">
+                    <span class="course-code">MH1055</span> PROMOCIÓN DE LA SALUD
+                </div>
+                <div class="course" data-code="MH1056" data-name="HUMANISMO Y CULTURA" data-prerequisites="">
+                    <span class="course-code">MH1056</span> HUMANISMO Y CULTURA
+                </div>
+            </div>
+
+            <div class="semester-column">
+                <h2>Semestre 6</h2>
+                <div class="course" data-code="MH1061" data-name="EPIDEMIOLOGÍA CLÍNICA" data-prerequisites="MH1053 MH1054">
+                    <span class="course-code">MH1061</span> EPIDEMIOLOGÍA CLÍNICA
+                </div>
+                <div class="course" data-code="MH1062" data-name="NOXAS Y RESPUESTAS II" data-prerequisites="MH1043">
+                    <span class="course-code">MH1062</span> NOXAS Y RESPUESTAS II
+                </div>
+                <div class="course" data-code="MH1063" data-name="MEDICINA INTERNA II" data-prerequisites="MH1054">
+                    <span class="course-code">MH1063</span> MEDICINA INTERNA II
+                </div>
+                <div class="course" data-code="MH1064" data-name="DISEÑO DE PRODUCTOS DE SALUD" data-prerequisites="MH1044 MH1055">
+                    <span class="course-code">MH1064</span> DISEÑO DE PRODUCTOS DE SALUD
+                </div>
+                <div class="course" data-code="MH1065" data-name="NUTRICIÓN PARA LAS CIENCIAS DE LA SALUD" data-prerequisites="MH1033 MH1035">
+                    <span class="course-code">MH1065</span> NUTRICIÓN PARA LAS CIENCIAS DE LA SALUD
+                </div>
+                <div class="course" data-code="ELECTIVO_6" data-name="ELECTIVO" data-prerequisites="">
+                    <span class="course-code">ELECTIVO</span> ELECTIVO
+                </div>
+            </div>
+
+            <div class="semester-column">
+                <h2>Semestre 7</h2>
+                <div class="course" data-code="MH1071" data-name="DESARROLLO MORFOFISIOLÓGICO DEL SER HUMANO" data-prerequisites="MH1012 MH1024">
+                    <span class="course-code">MH1071</span> DESARROLLO MORFOFISIOLÓGICO DEL SER HUMANO
+                </div>
+                <div class="course" data-code="MH1072" data-name="FARMACOLOGÍA CLÍNICA Y TERAPÉUTICA" data-prerequisites="MH1052">
+                    <span class="course-code">MH1072</span> FARMACOLOGÍA CLÍNICA Y TERAPÉUTICA
+                </div>
+                <div class="course" data-code="MH1073" data-name="MEDICINA INTERNA III" data-prerequisites="MH1063">
+                    <span class="course-code">MH1073</span> MEDICINA INTERNA III
+                </div>
+                <div class="course" data-code="MH1074" data-name="EMERGENCIAS Y DESASTRES" data-prerequisites="MH1011 MH1061">
+                    <span class="course-code">MH1074</span> EMERGENCIAS Y DESASTRES
+                </div>
+                <div class="course" data-code="MH1075" data-name="SEGURIDAD DEL PACIENTE" data-prerequisites="MH1064">
+                    <span class="course-code">MH1075</span> SEGURIDAD DEL PACIENTE
+                </div>
+            </div>
+
+            <div class="semester-column">
+                <h2>Semestre 8</h2>
+                <div class="course" data-code="MH1081" data-name="GENOMA Y SALUD" data-prerequisites="MH1071 MH1073">
+                    <span class="course-code">MH1081</span> GENOMA Y SALUD
+                </div>
+                <div class="course" data-code="MH1082" data-name="NOXAS Y RESPUESTAS III" data-prerequisites="MH1062">
+                    <span class="course-code">MH1082</span> NOXAS Y RESPUESTAS III
+                </div>
+                <div class="course" data-code="MH1083" data-name="MEDICINA INTERNA IV" data-prerequisites="MH1073">
+                    <span class="course-code">MH1083</span> MEDICINA INTERNA IV
+                </div>
+                <div class="course" data-code="MH1084" data-name="METODOLOGÍA DE LA INVESTIGACIÓN CIENTÍFICA" data-prerequisites="MH1061">
+                    <span class="course-code">MH1084</span> METODOLOGÍA DE LA INVESTIGACIÓN CIENTÍFICA
+                </div>
+                <div class="course" data-code="ELECTIVO_8" data-name="ELECTIVO - OCTAVO SEMESTRE" data-prerequisites="">
+                    <span class="course-code">ELECTIVO</span> ELECTIVO - OCTAVO SEMESTRE
+                </div>
+            </div>
+
+            <div class="semester-column">
+                <h2>Semestre 9</h2>
+                <div class="course" data-code="MH1091" data-name="ASPECTOS LEGALES DE LA PRÁCTICA MÉDICA" data-prerequisites="MH1083">
+                    <span class="course-code">MH1091</span> ASPECTOS LEGALES DE LA PRÁCTICA MÉDICA
+                </div>
+                <div class="course" data-code="MH1092" data-name="DESARROLLO PSICOLÓGICO Y SALUD MENTAL" data-prerequisites="MH1083">
+                    <span class="course-code">MH1092</span> DESARROLLO PSICOLÓGICO Y SALUD MENTAL
+                </div>
+                <div class="course" data-code="MH1093" data-name="PEDIATRÍA" data-prerequisites="MH1083">
+                    <span class="course-code">MH1093</span> PEDIATRÍA
+                </div>
+                <div class="course" data-code="MH1094" data-name="GERENCIA EN SALUD" data-prerequisites="MH1075">
+                    <span class="course-code">MH1094</span> GERENCIA EN SALUD
+                </div>
+                <div class="course" data-code="MH1095" data-name="SEMINARIO DE TESIS I" data-prerequisites="MH1084">
+                    <span class="course-code">MH1095</span> SEMINARIO DE TESIS I
+                </div>
+                <div class="course" data-code="MH1096" data-name="MEDICINA BASADA EN LA EVIDENCIA" data-prerequisites="MH1083">
+                    <span class="course-code">MH1096</span> MEDICINA BASADA EN LA EVIDENCIA
+                </div>
+            </div>
+
+            <div class="semester-column">
+                <h2>Semestre 10</h2>
+                <div class="course" data-code="MH1101" data-name="CIRUGÍA GENERAL Y ESPECIALIDADES" data-prerequisites="MH1093">
+                    <span class="course-code">MH1101</span> CIRUGÍA GENERAL Y ESPECIALIDADES
+                </div>
+                <div class="course" data-code="MH1102" data-name="OBSTETRICIA Y GINECOLOGÍA" data-prerequisites="MH1093">
+                    <span class="course-code">MH1102</span> OBSTETRICIA Y GINECOLOGÍA
+                </div>
+            </div>
+
+            <div class="semester-column">
+                <h2>Semestre 11</h2>
+                <div class="course" data-code="MH1111" data-name="EXTERNADO EN MEDICINA" data-prerequisites="MH1083">
+                    <span class="course-code">MH1111</span> EXTERNADO EN MEDICINA
+                </div>
+                <div class="course" data-code="MH1112" data-name="EXTERNADO EN PEDIATRÍA" data-prerequisites="MH1093">
+                    <span class="course-code">MH1112</span> EXTERNADO EN PEDIATRÍA
+                </div>
+                <div class="course" data-code="MH1113" data-name="EXTERNADO EN CIRUGÍA" data-prerequisites="MH1101">
+                    <span class="course-code">MH1113</span> EXTERNADO EN CIRUGÍA
+                </div>
+                <div class="course" data-code="MH1114" data-name="EXTERNADO EN GINECOLOGÍA Y OBSTETRICIA" data-prerequisites="MH1102">
+                    <span class="course-code">MH1114</span> EXTERNADO EN GINECOLOGÍA Y OBSTETRICIA
+                </div>
+                <div class="course" data-code="ELECTIVO_11_1" data-name="ELECTIVO - ONCEAVO SEMESTRE (1)" data-prerequisites="">
+                    <span class="course-code">ELECTIVO (1)</span> ELECTIVO - ONCEAVO SEMESTRE (1)
+                </div>
+                <div class="course" data-code="ELECTIVO_11_2" data-name="ELECTIVO - ONCEAVO SEMESTRE (2)" data-prerequisites="">
+                    <span class="course-code">ELECTIVO (2)</span> ELECTIVO - ONCEAVO SEMESTRE (2)
+                </div>
+            </div>
+
+            <div class="semester-column">
+                <h2>Semestre 12</h2>
+                <div class="course" data-code="MH1121" data-name="EXTERNADO EN GERIATRÍA" data-prerequisites="MH1083">
+                    <span class="course-code">MH1121</span> EXTERNADO EN GERIATRÍA
+                </div>
+                <div class="course" data-code="MH1122" data-name="EXTERNADO EN PSIQUIATRÍA" data-prerequisites="MH1092">
+                    <span class="course-code">MH1122</span> EXTERNADO EN PSIQUIATRÍA
+                </div>
+                <div class="course" data-code="MH1123" data-name="EXTERNADO RURAL" data-prerequisites="MH1083">
+                    <span class="course-code">MH1123</span> EXTERNADO RURAL
+                </div>
+                <div class="course" data-code="MH1124" data-name="EXTERNADO EN SALUD PÚBLICA" data-prerequisites="MH1094">
+                    <span class="course-code">MH1124</span> EXTERNADO EN SALUD PÚBLICA
+                </div>
+                <div class="course" data-code="MH1125" data-name="SEMINARIO DE TESIS II" data-prerequisites="MH1095">
+                    <span class="course-code">MH1125</span> SEMINARIO DE TESIS II
+                </div>
+            </div>
+
+            <div class="semester-column">
+                <h2>Semestre 13</h2>
+                <div class="course" data-code="MH1131" data-name="INTERNADO EN PEDIATRÍA" data-prerequisites="MH1091 MH1112">
+                    <span class="course-code">MH1131</span> INTERNADO EN PEDIATRÍA
+                </div>
+                <div class="course" data-code="MH1132" data-name="INTERNADO EN MEDICINA" data-prerequisites="MH1091 MH1111">
+                    <span class="course-code">MH1132</span> INTERNADO EN MEDICINA
+                </div>
+            </div>
+
+            <div class="semester-column">
+                <h2>Semestre 14</h2>
+                <div class="course" data-code="MH1141" data-name="INTERNADO EN CIRUGÍA" data-prerequisites="MH1091 MH1113">
+                    <span class="course-code">MH1141</span> INTERNADO EN CIRUGÍA
+                </div>
+                <div class="course" data-code="MH1142" data-name="INTERNADO EN GINECOLOGÍA Y OBSTETRICIA" data-prerequisites="MH1091 MH1114">
+                    <span class="course-code">MH1142</span> INTERNADO EN GINECOLOGÍA Y OBSTETRICIA
+                </div>
+                <div class="course" data-code="MH1143" data-name="TRABAJO DE INVESTIGACIÓN" data-prerequisites="">
+                    <span class="course-code">MH1143</span> TRABAJO DE INVESTIGACIÓN
+                </div>
+            </div>
+        </div>
+
+        <div id="errorMessage" class="error-message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
