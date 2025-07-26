@@ -1,1 +1,252 @@
+/* Paleta de colores en tonos azules */
+:root {
+    --primary-blue: #2c3e50; /* Azul oscuro para encabezados */
+    --secondary-blue: #3498db; /* Azul vibrante para elementos clave */
+    --light-blue: #e8f0fe; /* Azul muy claro para fondos de módulos */
+    --accent-blue: #5fa2e6; /* Azul medio para ramos no aprobados */
+    --light-bg: #f5f8fc; /* Fondo general muy claro */
+    --dark-text: #333333;
+    --light-text: #ffffff;
+    --approved-bg: #8bc34a; /* Verde para aprobado */
+    --approved-text: #33691e; /* Verde oscuro para texto aprobado */
+    --blocked-bg: #ffcdd2; /* Rojo claro para bloqueado */
+    --blocked-text: #b71c1c; /* Rojo oscuro para texto bloqueado */
+    --border-color: #a7d9f7; /* Borde para columnas de semestre */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-color: #2980b9; /* Azul más oscuro al pasar el mouse */
+}
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    color: var(--dark-text);
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: var(--light-text);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px var(--shadow-color);
+    padding: 40px;
+    width: 100%;
+    max-width: 1500px; /* Ampliado para alojar más columnas */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: var(--primary-blue);
+    margin-bottom: 40px;
+    font-size: 2.8em;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.curriculum-grid {
+    display: grid;
+    /* Define 7 columnas explícitamente, que se ajustarán con media queries */
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px; /* Espacio entre columnas */
+    justify-content: center;
+    align-items: flex-start; /* Alinea los elementos al inicio de la celda */
+}
+
+.semester-column {
+    background-color: var(--light-blue);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.semester-column h2 {
+    color: var(--secondary-blue);
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.6em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.course {
+    background-color: var(--accent-blue);
+    color: var(--light-text);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.95em;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column; /* Para que el código esté arriba del nombre */
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 70px; /* Altura mínima para uniformidad */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.course:last-child {
+    margin-bottom: 0;
+}
+
+/* Solo los ramos no aprobados y no bloqueados reaccionan al hover */
+.course:not(.approved):not(.blocked):hover {
+    background-color: var(--hover-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.course-code {
+    font-size: 0.75em;
+    font-weight: 600;
+    opacity: 0.8;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+/* Estilos para ramos aprobados */
+.course.approved {
+    background-color: var(--approved-bg);
+    color: var(--approved-text);
+    text-decoration: line-through;
+    cursor: default;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--approved-text); /* Borde para aprobado */
+    opacity: 0.9; /* Ligeramente más opaco para que se note menos el tachado */
+}
+
+.course.approved .course-code {
+    color: var(--approved-text); /* Asegura que el código también cambie de color */
+}
+
+/* Estilos para ramos bloqueados (con requisitos no cumplidos) */
+.course.blocked {
+    background-color: var(--blocked-bg);
+    color: var(--blocked-text);
+    cursor: not-allowed;
+    opacity: 0.7;
+    border: 1px dashed var(--blocked-text); /* Borde punteado para bloqueado */
+}
+
+.course.blocked .course-code {
+    color: var(--blocked-text); /* Asegura que el código también cambie de color */
+}
+
+.error-message {
+    background-color: #ffe0b2; /* Naranja claro para mensajes de error */
+    color: #e65100; /* Naranja oscuro */
+    border: 1px solid #ffab91;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 1.1em;
+    font-weight: 500;
+    display: none; /* Oculto por defecto, se muestra con JS */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+}
+
+.error-message.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1500px) {
+    .curriculum-grid {
+        grid-template-columns: repeat(6, 1fr); /* Reduce a 6 columnas */
+    }
+}
+
+@media (max-width: 1200px) {
+    .curriculum-grid {
+        grid-template-columns: repeat(5, 1fr); /* Reduce a 5 columnas */
+        gap: 20px;
+    }
+    .container {
+        padding: 30px;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 992px) {
+    .curriculum-grid {
+        grid-template-columns: repeat(4, 1fr); /* Reduce a 4 columnas */
+        gap: 18px;
+    }
+    .container {
+        padding: 25px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    .semester-column h2 {
+        font-size: 1.4em;
+    }
+    .course {
+        padding: 12px;
+        font-size: 0.9em;
+        min-height: 65px;
+    }
+}
+
+@media (max-width: 768px) {
+    .curriculum-grid {
+        grid-template-columns: repeat(3, 1fr); /* Reduce a 3 columnas */
+        gap: 15px;
+    }
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    .semester-column h2 {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+    }
+    .course {
+        padding: 10px;
+        font-size: 0.85em;
+        min-height: 60px;
+    }
+    .course-code {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 576px) {
+    .curriculum-grid {
+        grid-template-columns: 1fr; /* Una columna para móviles pequeños */
+    }
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+    .semester-column {
+        padding: 15px;
+    }
+    .semester-column h2 {
+        font-size: 1.2em;
+    }
+}
